@@ -1,0 +1,11 @@
+version: '2'
+services:
+    # Raspberry Pi Jenkins
+    jenkins:
+        image: tanisperez/raspberrypi-jenkins:1.0-arm64
+        container_name: jenkins
+        ports:
+            - 8000:8000
+        restart:
+            always
+
