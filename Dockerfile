@@ -2,7 +2,7 @@ FROM adoptopenjdk/openjdk8:ubi
 MAINTAINER Estanislao Pérez Nartallo <tanisperez@gmail.com>
 
 # Jenkins version
-ENV JENKINS_VERSION 2.60
+ENV JENKINS_VERSION 2.242
 
 # Other env variables
 ENV JENKINS_HOME /var/jenkins_home
