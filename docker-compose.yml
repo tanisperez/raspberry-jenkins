@@ -4,8 +4,11 @@ services:
     jenkins:
         image: tanisperez/raspberrypi-jenkins:1.0-arm64
         container_name: jenkins
+        volumes:
+         - /mnt/data/jenkins:/var/jenkins_home
         ports:
-            - 8000:8000
+            - 8080:8080
+            - 50000:50000
         restart:
             always
 
