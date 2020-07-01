@@ -13,7 +13,7 @@ ENV JAVA_HOME /opt/jdk11
 
 # Install git, openjdk8
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends git wget ttf-dejavu fontconfig \
+  && apt-get install -y --no-install-recommends git wget ttf-dejavu fontconfig ca-certificates \
   && rm -rf /var/lib/apt/lists/*
 
 # Get OpenJDK 8
@@ -47,4 +47,4 @@ WORKDIR ${JENKINS_HOME}
 EXPOSE 8080 ${JENKINS_SLAVE_AGENT_PORT}
 
 # Start Jenkins
-CMD ["sh", "-c", "/opt/jdk8/bin/java -jar /opt/jenkins.war -Djava.awt.headless=true"]
+CMD ["sh", "-c", "/opt/jdk8/bin/java -jar /opt/jenkins.war"]
